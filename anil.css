@@ -64,11 +64,12 @@ nav ul li:last-child {
 
 .navigation {
     display: inline-block; 
+    box-shadow: 0px 2px 10px light grey;
 }
 
 .text {
     display: inline-block;  
-    margin-left: 20px; 
+    margin-left: 100%; 
 }
 
 
@@ -87,6 +88,7 @@ nav ul li:last-child {
     display: inline-block;
 }
 
+
 .text {
      
     margin-left: 0px;
@@ -103,3 +105,43 @@ nav ul li:last-child {
     float:right; 
    margin:0px 70px;
 }
+
+.image-container {
+    display: flex;
+    gap: 20px; /* Add spacing between images */
+    justify-content: center; /* Center-align images horizontally */
+}
+
+.image-wrapper {
+    flex: 0 0 calc(16.666% - 20px); /* Set width for each image wrapper (16.666% - spacing) */
+    background-color:white;
+    border-radius: 0px;
+    box-shadow: white;
+    text-align: left;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 30px; /* Rounded corners for the top of the image */
+}
+
+.image-text {
+    padding: 10px;
+    background-color:white; /* Background color for text */
+    border-radius: 0 0 8px 8px; /* Rounded corners for the bottom of the text */
+}
+
+.image-text h5{
+    text-align:left;
+    font-weight:bold;
+}
+
+.image-text p{
+    text-align:left;
+    opacity: 0.5;
+}
+.distance {
+    font-weight: bold;            
+}            
+
