@@ -5,8 +5,31 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="anil.css">
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
+
+    <script>
+        document.getElementById('nextButton').addEventListener('click', function() {
+    // Implement logic to navigate to the next icon or perform other actions
+    console.log('Next button clicked');
+});
+
+
+function moveIcons(distance) {
+    const iconList = document.getElementById('icon-list');
+    const currentTransform = getComputedStyle(iconList).transform;
+    const currentTranslateX = new WebKitCSSMatrix(currentTransform).m41;
+
+    // Calculate the new position
+    const newTranslateX = currentTranslateX + distance;
+
+    // Apply the new transform
+    iconList.style.transform = `translateX(${newTranslateX}px)`;
+  }
+    </script>
 </head>
 <body>
     <div><u>Learn about Guest Favourites,the most loved homes on Airbnb</u></div>
@@ -26,36 +49,105 @@
         <nav class="img2">
             <img src="l.PNG"  style="width: 20px; height: 20px; " >
                 <img src="PP.PNG"  style="width: 30px; height: 30px; " >
-</nav>
-<div class="navbar">
-   <img src="">
-   <img src="">
-   <img src="">
-   <img src="">
-   <img src="">
-   <img src="">
-   <img src="">
-   <img src="">
-   <img src="">
-   <img src="">
-   <img src="">
-   <img src="">
-   <img src="">
-   <img src="">
-   <img src=""> 
-   <img src="">
-   <img src="">
+
+
+</div>
+
+    <div class="icon-container" id="icon-list">
+        <div class="icon-item">
+            <img src="trending.jpg" alt="Trending">
+            <span>Trending</span>
+        </div>
+        <div class="icon-item">
+            <img src="rooms.jpg" alt="Rooms">
+            <span>Rooms</span>
+        </div>
+        <div class="icon-item">
+            <img src="country.jpg" alt="country">
+            <span>Rooms</span>
+        </div>
+        <div class="icon-item">
+            <img src="sufring.jpg" alt="sufring">
+            <span>Rooms</span>
+        </div>
+        <div class="icon-item">
+            <img src="bed.jpg" alt="bed">
+            <span>Rooms</span>
+        </div>
+        <div class="icon-item">
+            <img src="desert.jpg" alt="desert">
+            <span>Rooms</span>
+        </div>
+        <div class="icon-item">
+            <img src="ryokans.jpg" alt="ryokans">
+            <span>Rooms</span>
+        </div>
+        <div class="icon-item">
+            <img src="minus.jpg" alt="minus">
+            <span>Rooms</span>
+        </div>
+         <div class="icon-item">
+            <img src="camping.jpg" alt="camping">
+            <span>Rooms</span>
+        </div>
+        <div class="icon-item">
+            <img src="raids.jpg" alt="raids">
+            <span>Rooms</span>
+        </div>
+        <div class="icon-item">
+            <img src="hanoks.jpg" alt="hanoks">
+            <span>Rooms</span>
+        </div>
+        <div class="icon-item">
+            <img src="skiing.jpg"  alt="skiing">
+            <span>Rooms</span>
+        </div>
+        <div class="icon-item">
+            <img src="skiing.jpg"  alt="skiing">
+            <span>Rooms</span>
+        </div>
+        
+    </div>
+    <button class="arrow-button" id="nextButton" onclick="moveIcons(50)">→</button>
+    
+    
+
+
+    
+    
+    <script>
+        function moveIcons(distance) {
+          const iconList = document.getElementById('icon-list');
+          const currentTransform = getComputedStyle(iconList).transform;
+          const currentTranslateX = new WebKitCSSMatrix(currentTransform).m41;
+      
+          // Calculate the new position
+          const newTranslateX = currentTranslateX + distance;
+      
+          // Apply the new transform
+          iconList.style.transform = `translateX(${newTranslateX}px)`;
+        }
+      </script>
+
    
-   <img src="">
+       
+       
+      
+     
+     
+      
 
-</div>
-
-</div>
-    <hr>
 
 
+    
+       
 
-    <hr>
+        
+            
+            
+
+
+
 
     
     <div class="image-container">

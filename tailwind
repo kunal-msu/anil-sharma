@@ -1,0 +1,100 @@
+<div class="card">
+        <div class="image-container">
+            <div class="image-wrapper">
+                <img src="kolkata.jpg" alt="Image 1">
+                <h5 class="text-left">Chiang Mai,Thailand</h5>
+                <p>Hosted by Poppy<br>
+                21-26 jan<br>
+            4,163 night</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="kolkata.jpg" alt="Image 2">
+                <h5>Kolkata,India</h5>
+                <p>Hosted by Indranil<br>
+                30 Jan -Feb<br>
+            1,769 night</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="soh.jpg" alt="Image 3">
+                <h5>Sohryngkham, India</h5>
+                <p>Hosted by Shariti<br>
+                2-7 jan<br>
+            5,706 night</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="soh.jpg" alt="Image 4">
+                <h5>Kolkata,India</h5>
+                <p>Hosted by Mehul<br>
+                17-22 Feb<br>
+            4,680 night</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="l4.jpg" alt="Image 5">
+                <h5>Thailand</h5>
+                <p>Hosted by Mark<br>
+                20-25 jan<br>
+            1,885 night</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="kur.jpg" alt="Image 6">
+                <h5>Kurseong,india</h5>
+                <p>Hosted by Pojja sharma<br>
+                1-6 jan<br>
+            4,108 night</p>
+            </div>
+
+            <div class="icon-container">
+                <div class="icon-item">
+                    <img src="trending.jpg" alt="Trending">
+                    <span>Trending</span>
+                </div>
+                <div class="icon-item">
+                    <img src="rooms.jpg" alt="Rooms">
+                    <span>Rooms</span>
+                </div>
+                <div class="icon-item">
+                    <img src="country.jpg" alt="country">
+                    <span>Rooms</span>
+                </div>
+                <div class="icon-item">
+                    <img src="sufring.jpg" alt="sufring">
+                    <span>Rooms</span>
+                </div>
+                <div class="icon-item">
+                    <img src="bed.jpg" alt="bed">
+                    <span>Rooms</span>
+                </div>
+                <div class="icon-item">
+                    <img src="desert.jpg" alt="desert">
+                    <span>Rooms</span>
+                </div>
+                <div class="icon-item">
+                    <img src="ryokans.jpg" alt="ryokans">
+                    <span>Rooms</span>
+                </div>
+                <div class="icon-item">
+                    <img src="minus.jpg" alt="minus">
+                    <span>Rooms</span>
+                </div>
+                 <div class="icon-item">
+                    <img src="camping.jpg" alt="camping">
+                    <span>Rooms</span>
+                </div>
+                <div class="icon-item">
+                    <img src="raids.jpg" alt="raids">
+                    <span>Rooms</span>
+                </div>
+                <div class="icon-item">
+                    <img src="hanoks.jpg" alt="hanoks">
+                    <span>Rooms</span>
+                </div>
+                <div class="icon-item">
+                    <img src="skiing.jpg"  alt="skiing">
+                    <span>Rooms</span>
+                </div>
+                
+                <button class="arrow-button" id="nextButton">→</button>
+            </div>
+            
+            <script src="script.js"></script>
+           
