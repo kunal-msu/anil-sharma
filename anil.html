@@ -29,6 +29,21 @@ function moveIcons(distance) {
     // Apply the new transform
     iconList.style.transform = `translateX(${newTranslateX}px)`;
   }
+
+  // Function to open the popup
+function openPopup() {
+    document.getElementById('popupContainer').style.display = 'block';
+}
+
+// Function to close the popup
+function closePopup() {
+    document.getElementById('popupContainer').style.display = 'none';
+}
+
+// Event listener to open the popup when the images are clicked
+document.getElementById('popupButton1').addEventListener('click', openPopup);
+document.getElementById('popupButton2').addEventListener('click', openPopup);
+
     </script>
 </head>
 <body>
@@ -47,9 +62,19 @@ function moveIcons(distance) {
         <img src="world.PNG"class="" class="animated-image" style="width: 20px; height: 20px; ">
     
         <nav class="img2">
-            <img src="l.PNG"  style="width: 20px; height: 20px; " >
-                <img src="PP.PNG"  style="width: 30px; height: 30px; " >
+           
 
+
+            <img src="l.png" id="popupButton1" style="width: 18px; height: 18px; cursor: pointer;" >
+            <img src="PP.PNG" id="popupButton2" style="width: 30px; height: 30px; cursor: pointer;" >
+            
+            <!-- Popup container -->
+            <div id="popupContainer" class="popup">
+                <span class="closeButton" onclick="closePopup()">&times;</span>
+                <p><a href="#">Login</a></p>
+                <p><a href="#">Sign Up</a></p>
+            </div>
+            
 
 </div>
 
@@ -117,7 +142,7 @@ function moveIcons(distance) {
     
     <script>
         function moveIcons(distance) {
-          const iconList = document.getElementById('icon-list');
+          const iconList = document.getElementById('                   ');
           const currentTransform = getComputedStyle(iconList).transform;
           const currentTranslateX = new WebKitCSSMatrix(currentTransform).m41;
       
@@ -488,8 +513,129 @@ function moveIcons(distance) {
                 <p>1,176 Kilometres away<br>
                 9-14 Jan<br></div>
         </div>
-        
+    </div>
+    <div class="center-align">
+    <h4>Continue exploring lake homes</h4>
+    <button type="button" class="btn btn-dark">Show more</button>
+</div>
+<footer>
+<div>
+
+
+    <h4 class="right">Inspiration for future getaways</h4>
+</div>
+
+<div class="footer">
+    <a href="#" class="footer-item">Popular</a>
+    <a href="#" class="footer-item">Arts & culture</a>
+    <a href="#" class="footer-item">Outdoors</a>
+    <a href="#" class="footer-item">Mountains</a>
+    <a href="#" class="footer-item">Beach</a>
+    <a href="#" class="footer-item">Unique stays</a>
+    <a href="#" class="footer-item">Categories</a>
+    <a href="#" class="footer-item">Things to do</a>
+
+</div>
+
+    <div class="grid-container">
+        <div class="grid-item">Canmore<p class="opacity">Holiday rentals</p></div>
+        <div class="grid-item">Benalmadena<p class="opacity">Flat rentals</p></div>
+        <div class="grid-item">Marbella<p  class="opacity">Villa rentals</p></div>
+        <div class="grid-item">Mijas<p  class="opacity">House rentals</p></div>
+        <div class="grid-item">Prescott<p class="opacity">House rentals</p></div>
+        <div class="grid-item">Scottsdale<p class="opacity">mansion rentals</p></div>
+        <div class="grid-item">Tucson<p class="opacity">Apartment rentals</p></div>
+        <div class="grid-item">Jasper<p class="opacity">Hoilday rentals</p></div>
+        <div class="grid-item">Devonport<p class="opacity">Cottage rentals</p></div>
+        <div class="grid-item">Mallacoota<p class="opacity">Beach house rentals</p></div>
+        <div class="grid-item">Ibiza<p class="opacity">Holiday rentals</p></div>
+        <div class="grid-item">Anaheim<p class="opacity">Family-frendly rentals</p></div>
+        <div class="grid-item">Monterey<p class="opacity">House rentals</p></div>
+        <div class="grid-item">Pasa Robles<p class="opacity">Holiday rentals</p></div>
+        <div class="grid-item">Santa Barbara<p class="opacity">Beachfront rentals</p></div>
+        <div class="grid-item">Sonoma<p class="opacity">Pet-friendly rentals</p></div>
+        <div class="grid-item">Mountain view<p class="opacity">Cabin rentals</p></div>
+        <div class="grid-item">Dubai<p class="opacity">House rentals</p></div>
        
     </div>
+    
+<hr>
+
+<div class="grid-container1">
+    <div class="header">Support</div>
+    <div class="header">Hosting</div>
+    <div class="header">Airbnb</div>
+   
+    <div class="grid-item1">Help Centre</div>
+    <div class="grid-item1">Airbnb your home</div>
+    
+    <div class="grid-item1">Newsroom
+    </div>
+    
+    <div class="grid-item1">AirCover</div>
+    
+    <div class="grid-item1">AirCover for Hosts
+    </div>
+    
+    <div class="grid-item1">New features</div>
+    
+    <div class="grid-item1">Anti-discrimination</div>
+    
+    <div class="grid-item1">Hosting resources</div>
+    
+    <div class="grid-item1">Careers</div>
+    
+    <div class="grid-item1">Disability support</div>
+    
+    <div class="grid-item1">Community forum</div>
+    
+    <div class="grid-item1">Investors</div>
+    
+    <div class="grid-item1">Cancellation options</div>
+    
+    <div class="grid-item1">Hosting responsibly</div>
+    
+    <div class="grid-item1">Airbnb.org emergency stays</div>
+    <div class="grid-item1">Report neighbourhood concern</div>
+    
+</div>
+    <br>
+    <br>
+    <br>
+<div>
+    <div class="container">
+        <h4 class="h44">© 2024 Airbnb, Inc. <span class="under">Privacy.</span> <span class="under">Terms.</span> <span class="under">Sitemap.</span> <span class="under">Company details</span></h4>
+    
+        <div class="language-selector">
+            <label for="language"></label>
+            <select id="language">
+                
+                <option value="en">English</option>
+                <option value="fr">French</option>
+                <option value="es">Spanish</option>
+            </select>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</footer>
+
+
+
+
+    </body>
        
 </html>

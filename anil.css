@@ -197,4 +197,199 @@ nav ul li:last-child {
     outline: none;
 }
 
+.center-align {
+    text-align: center;
+}
+
+/* Optional: Add margin for better spacing */
+h4,  {
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.btn{
+margin-bottom: 20px;
+font-weight:bold;
+}
+
+.right{
+
+    margin-right:950px;
+    font-size: 22px;
+}
+
+.footer {
+    background-color: white;
+    color: black;
+    padding: 5px; /* Adds a small gap around the footer items */
+    margin-right:320px;
+    border:transparent;
+}
+
+.footer-item {
+    padding: 5px 20px; /* Adjust the padding for space around the items */
+    text-decoration: none;
+    color:black;
+    opacity:70%;
+    border:transparent;
+}
+
+.footer-item:hover {
+    color:black; /* Optional: hover effect color */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Creates 6 equal-width columns */
+    grid-template-rows: repeat(3, auto); /* Creates 3 rows */
+    gap:3px; /* Adds a small gap between grid items */
+    margin-left:251px;
+    border:transparent;
+    font-size:14px;
+    margin-right:350px;
+    
+    
+}
+
+.grid-item {
+    padding: 10px;
+    
+    text-align: center;
+  border:transparent;
+  letter-spacing: -1px;
+  margin-bottom: -10px;
+ 
+  opacity:80%;
+ 
+}
+
+.opacity{
+
+    opacity:60%;
+    font-size:18px;
+    letter-spacing: -1px;
+    margin-left:30px;
+}
+
+.grid-container1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 columns */
+    gap:3px; /* Adds a small gap between grid items */
+    margin-left:251px;
+    border:transparent;
+    font-size:14px;
+    
+    margin-right:800px;
+}
+
+.header {
+    font-weight: bold; /* Makes the header text bold */
+}
+
+.grid-item1 {
+    padding: 10px;
+    
+    text-align: center;
+  border:transparent;
+  letter-spacing: 1px;
+  margin-bottom: -10px;
+  font-weight:300;
+  font-size:14px;
+  
+ 
+}
+.grid-item1:hover {
+    text-decoration: underline; /* Underlines text on hover */
+}
+
+
+
+/* Styles for the underline effect on hover */
+.under:hover {
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Adjusts spacing between the two elements */
+    align-items: center; /* Centers items vertically within the flex container */
+}
+
+.h44 {
+    margin-right: 200px; /* Adds some space to the right of the h4 element */
+    font-size: 15px;
+    
+}
+
+.under:hover {
+    text-decoration: underline; /* Underlines text on hover */
+}
+
+.language-selector {
+    font-family: Arial, sans-serif; /* Optional: Set font-family */
+    margin-right:150px;
+}
+
+
+
+select {
+    padding: 5px; /* Adds some padding around the select element */
+    font-size: 14px; /* Sets the font size of the select element */
+    border:transparent;
+}
+.fa-brands {
+    margin:10px;
+    font-size:22px;
+}
+.span{
+    font-size:14px;
+    font-weight:300;
+}
+
+.span:hover {
+    text-decoration: underline; /* Underlines text on hover */
+}
+
+#language option[value="en"]:hover {
+    text-decoration: underline;
+}
+
+
+/* Popup container styles */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1000; /* Make sure it appears on top of other elements */
+}
+
+/* Close button styles */
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Styling for links inside the popup */
+.popup a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
 
