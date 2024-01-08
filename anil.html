@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <script>
         document.getElementById('nextButton').addEventListener('click', function() {
@@ -44,10 +46,57 @@ function closePopup() {
 document.getElementById('popupButton1').addEventListener('click', openPopup);
 document.getElementById('popupButton2').addEventListener('click', openPopup);
 
+
+
+
+
+function moveIcons(distance) {
+          const iconList = document.getElementById('                   ');
+          const currentTransform = getComputedStyle(iconList).transform;
+          const currentTranslateX = new WebKitCSSMatrix(currentTransform).m41;
+      
+          // Calculate the new position
+          const newTranslateX = currentTranslateX + distance;
+      
+          // Apply the new transform
+          iconList.style.transform = `translateX(${newTranslateX}px)`;
+        }
+
+
+
+
+        let slideIndex = 0;
+    const slides = document.querySelectorAll('.image-wrapper');
+
+    function showSlide(index) {
+        if (index < 0) {
+            slideIndex = slides.length - 1;
+        } else if (index >= slides.length) {
+            slideIndex = 0;
+        }
+
+        slides.forEach((slide, i) => {
+            slide.style.transform = `translateX(${(i - slideIndex) * -500}px)`;
+        });
+    }
+
+    function prevSlide() {
+        showSlide(slideIndex - 1);
+    }
+
+    function nextSlide() {
+        showSlide(slideIndex + 1);
+    }
+
+    // Automatic Slide (Optional)
+    setInterval(() => {
+        nextSlide();
+    }, 3000);
+      
     </script>
 </head>
 <body>
-    <div><u>Learn about Guest Favourites,the most loved homes on Airbnb</u></div>
+    <div class="div2"><u>Learn about Guest Favourites,the most loved homes on Airbnb</u></div>
        <div> <img src="download.PNG" class="img1" style="width: 140px; height: 50px; ">
         
         <nav class="navigation">
@@ -130,394 +179,342 @@ document.getElementById('popupButton2').addEventListener('click', openPopup);
         <div class="icon-item">
             <img src="skiing.jpg"  alt="skiing">
             <span>Rooms</span>
+            <button class="arrow-button" id="nextButton" onclick="moveIcons(50)">→</button>
+    
+    
         </div>
         
     </div>
-    <button class="arrow-button" id="nextButton" onclick="moveIcons(50)">→</button>
-    
-    
-
-
-    
-    
-    <script>
-        function moveIcons(distance) {
-          const iconList = document.getElementById('                   ');
-          const currentTransform = getComputedStyle(iconList).transform;
-          const currentTranslateX = new WebKitCSSMatrix(currentTransform).m41;
-      
-          // Calculate the new position
-          const newTranslateX = currentTranslateX + distance;
-      
-          // Apply the new transform
-          iconList.style.transform = `translateX(${newTranslateX}px)`;
-        }
-      </script>
-
-   
-       
-       
-      
-     
-     
-      
-
-
-
-    
-       
-
-        
-            
-            
-
-
-
-
-    
-    <div class="image-container">
-        <!-- Image 1 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1" height="100" width="500">
-            <div class="image-text"> <h5>Kolkata,India</h5>
-                <p>Hosted by Indranil<br>
-                30 Jan -Feb<br>
-            1,769 night</p></div>
-        </div>
-    
-        <!-- Image 2 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1">
-            <div class="image-text"><h5>Sohryngkham, India</h5>
-                <p>Hosted by Shariti<br>
-                2-7 jan<br>
-            5,706 night</p></div>
-        </div>
-    
-        <!-- Image 3 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1">
-            <div class="image-text">  <h5>Kolkata,India</h5>
-                <p>Hosted by Mehul<br>
-                17-22 Feb<br>
-            4,680 night</p></div>
-        </div>
-    
-        <!-- Image 4 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1">
-            <div class="image-text"><h5>Thailand</h5>
-                <p>Hosted by Mark<br>
-                20-25 jan<br>
-            1,885 night</p></div>
-        </div>
-    
-        <!-- Image 5 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1">
-            <div class="image-text"> <h5>Kurseong,india</h5>
-                <p>Hosted by Pojja sharma<br>
-                1-6 jan<br>
-            4,108 night</p></div>
-        </div>
-    
-        <!-- Image 6 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1">
-            <div class="image-text"><h5>Thailand</h5>
-            <p>1,174 Kilometres away<br>
-            2-7 Jan<br>
-        3,783</p></div>
-        </div>
-    </div>
-
-    <div class="image-container">
-        <!-- Image 7 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1">
-            <div class="image-text"><h5>Khusuea,Amphur,THailand</h5>
-            <p>1,188 Kilometres away<br>
-            3-8 Jan <br>
-        55,359 night</p></div>
-        </div>
-    
-        <!-- Image 8 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1">
-            <div class="image-text"><h5>Chiang Mai,Thailand</h5>
-            <p>1,163 Kilometres away<br>
-            9,692 night</p></div>
-        </div>
-    
-        <!-- Image 9 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1">
-            <div class="image-text"><h5>Thailand</h5>
-            <p>1,264 Kilometres away<br>
-            12,415 night</p></div>
-        </div>
-    
-        <!-- Image 10 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1">
-            <div class="image-text"><h5>THailand,Thailand</h5>
-            <p>1,169 Kilometres away<br>
-            18-23 Jan<br>
-        24,847 night</p></div>
-        </div>
-    
-        <!-- Image 11 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-            <p>1,176 Kilometres away<br>
-            9-14 Jan<br>
-        5,242</p></div>
-        </div>
-    
-        <!-- Image 12 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1">
-            <div class="image-text"><h5>San Sai Luang,Chaing Mai, Thailand</h5>
-            <p>1,185 Kilometres away<br>
-            9-14 Mar<br>
-        3,513</p></div>
-        </div>
-    </div>
-    
-    <div class="image-container">
-        <!-- Image 13 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    
-        <!-- Image 14 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    
-        <!-- Image 16 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    
-        <!-- Image 17 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    
-        <!-- Image 18 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    
-        <!-- Image 19 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    </div>
-    <div class="image-container">
-        <!-- Image 20 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    
-        <!-- Image 21 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    
-        <!-- Image 22 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    
-        <!-- Image 23 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    
-        <!-- Image 24 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 5">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    
-        <!-- Image 25 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 6">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    </div>
-    <div class="image-container">
-        <!-- Image 26 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    
-        <!-- Image 27 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 2">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    
-        <!-- Image 28 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 3">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    
-        <!-- Image 29 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 4">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    
-        <!-- Image 30 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 5">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    
-        <!-- Image 31 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 6">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    </div>
-    <div class="image-container">
-        <!-- Image 32 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    
-        <!-- Image 33 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 2">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    
-        <!-- Image 34 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 3">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    
-        <!-- Image 35 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 4">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    
-        <!-- Image 36 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 5">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    
-        <!-- Image 37 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 6">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    </div>
-    <div class="image-container">
-        <!-- Image 38 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 1">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    
-        <!-- Image 39 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 2">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    
-        <!-- Image 40 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 3">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br> </div>
-        </div>
-    
-        <!-- Image 41 -->
-        <div class="image-wrapper">
-            <img src="kolkata.jpg" alt="Image 4">
-            <div class="image-text"><h5>Chiang Mai, Thailand</h5>
-                <p>1,176 Kilometres away<br>
-                9-14 Jan<br></div>
-        </div>
-    </div>
-    <div class="center-align">
-    <h4>Continue exploring lake homes</h4>
-    <button type="button" class="btn btn-dark">Show more</button>
 </div>
+</div>
+
+
+    
+    
+    
+       
+
+<div class="row row-cols-1 row-cols-md-4 g-4" style="padding-top: 30px;">
+    <div class="col">
+      <div class="card h-100">
+        <img src="ll.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Kolkata,India </h5>
+          <div class="rating">
+            
+            <i class="fas fa-star"></i>
+            <span class="rating">4.5</span>
+         
+          <p class="card-text">Hosted by Indranil<br>
+            30 Jan -Feb<br>
+        ₹1,769 night</p>
+        
+            
+        </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <img src="l2.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Sohryngkham, India</h5>
+            <p class="card-text">Hosted by Shariti<br>
+              2-7 jan<br>
+         ₹5,706 night</p>
+          </div>
+         
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="l3.jpg" class="card-img-top" alt="..." height="200px">
+          <div class="card-body">
+            <h5 class="card-title">Kolkata,India</h5>
+            <p class="card-text">Hosted by Mehul<br>
+              17-22 Feb<br>
+          ₹4,680 night</p>
+          </div>
+         
+        </div>
+      </div>
+      <div class="col">
+          <div class="card h-100">
+            <img src="l4.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+              <h5 class="card-title">Thailand</h5>
+              <p class="card-text">Hosted by Mark<br>
+                20-25 jan<br>
+            ₹1,885 night</p>
+            </div>
+           
+          </div>
+        </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-4 g-4" style="padding-top: 30px;">
+        <div class="col">
+          <div class="card h-100">
+            <img src="l5.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Kurseong,india</h5>
+              <p class="card-text">Hosted by Pojja sharma<br>
+                1-6 jan<br>
+            ₹4,108 night</p>
+            </div>
+           
+          </div>
+        </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="l6.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text">
+              </div>
+              
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="l7.webp" class="card-img-top" alt="..." height="200px">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text"><a href="#">Read All The Lyrics To Conway The Machine & Wun Two’s New Album ‘Palermo’</a></p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col">
+              <div class="card h-100">
+                <img src="l8.webp" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text"><a href="#">What’s Up Next: Here’s Every Album Dropping In January</a></p>
+                </div>
+                
+              </div>
+            </div>
+        </div>
+    
+        <div class="row row-cols-1 row-cols-md-4 g-4" style="padding-top: 30px;">
+            <div class="col">
+              <div class="card h-100">
+                <img src="l9.webp" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text"><a href="#">The Top Artists Of 2023 According To Genius Data</p></a>
+                </div>
+                
+              </div>
+            </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="l32.webp" class="card-img-top" alt="..." height="200px">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text"><a href="#">The Top Artists Of 2023 According To Genius Data</p></a>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="l31.webp" class="card-img-top" alt="..." height="200px">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text"><a href="#">Read All The Lyrics To Conway The Machine & Wun Two’s New Album ‘Palermo’</a></p>
+                  </div>
+                 
+                </div>
+              </div>
+              <div class="col">
+                  <div class="card h-100">
+                    <img src="l12.webp" class="card-img-top" alt="..." height="200px">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text"><a href="#">What’s Up Next: Here’s Every Album Dropping In January</a></p>
+                    </div>
+                    
+                  </div>
+                </div>
+            </div>
+        
+            <div class="row row-cols-1 row-cols-md-4 g-4" style="padding-top: 30px;">
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="l13.webp" class="card-img-top" alt="..." height="200px">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text"><a href="#">The Top Artists Of 2023 According To Genius Data</p></a>
+                    </div>
+                   
+                  </div>
+                </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="l14.webp" class="card-img-top" alt="..." height="200px">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text"><a href="#">The Top Artists Of 2023 According To Genius Data</p></a>
+                      </div>
+                     
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="l15.webp" class="card-img-top" alt="..." height="200px">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text"><a href="#">Read All The Lyrics To Conway The Machine & Wun Two’s New Album ‘Palermo’</a></p>
+                      </div>
+                     
+                    </div>
+                  </div>
+                  <div class="col">
+                      <div class="card h-100">
+                        <img src="l16.webp" class="card-img-top" alt="..." height="200px">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text"><a href="#">What’s Up Next: Here’s Every Album Dropping In January</a></p>
+                        </div>
+                        
+                      </div>
+                    </div>
+                </div>
+            
+                <div class="row row-cols-1 row-cols-md-4 g-4" style="padding-top: 30px;">
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="l17.webp" class="card-img-top" alt="..." height="200px">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text"><a href="#">The Top Artists Of 2023 According To Genius Data</p></a>
+                        </div>
+                       
+                      </div>
+                    </div>
+                      <div class="col">
+                        <div class="card h-100">
+                          <img src="l18.webp" class="card-img-top" alt="..." height="200px">
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text"><a href="#">The Top Artists Of 2023 According To Genius Data</p></a>
+                          </div>
+                         
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card h-100">
+                          <img src="l19.webp" class="card-img-top" alt="..." height="200px">
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text"><a href="#">Read All The Lyrics To Conway The Machine & Wun Two’s New Album ‘Palermo’</a></p>
+                          </div>
+                          
+                        </div>
+                      </div>
+                      <div class="col">
+                          <div class="card h-100">
+                            <img src="l20.webp" class="card-img-top" alt="..." height="200px">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text"><a href="#">What’s Up Next: Here’s Every Album Dropping In January</a></p>
+                            </div>
+                            
+                          </div>
+                        </div>
+                    </div>
+                
+                    <div class="row row-cols-1 row-cols-md-4 g-4" style="padding-top: 30px;">
+                        <div class="col">
+                          <div class="card h-100">
+                            <img src="l21.webp" class="card-img-top" alt="..." height="200px">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text"><a href="#">The Top Artists Of 2023 According To Genius Data</p></a>
+                            </div>
+                           
+                          </div>
+                        </div>
+                          <div class="col">
+                            <div class="card h-100">
+                              <img src="l22.webp" class="card-img-top" alt="..." height="200px">
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text"><a href="#">The Top Artists Of 2023 According To Genius Data</p></a>
+                              </div>
+                             
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="card h-100">
+                              <img src="l23.webp" class="card-img-top" alt="..." height="200px">
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text"><a href="#">Read All The Lyrics To Conway The Machine & Wun Two’s New Album ‘Palermo’</a></p>
+                              </div>
+                              
+                            </div>
+                          </div>
+                          <div class="col">
+                              <div class="card h-100">
+                                <img src="l24.webp" class="card-img-top" alt="..." height="200px">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text"><a href="#">What’s Up Next: Here’s Every Album Dropping In January</a></p>
+                                </div>
+                               
+                              </div>
+                            </div>
+                        </div>
+                    
+                        <div class="row row-cols-1 row-cols-md-4 g-4" style="padding-top: 30px;">
+                            <div class="col">
+                              <div class="card h-100">
+                                <img src="l25.webp" class="card-img-top" alt="..." height="200px">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text"><a href="#">The Top Artists Of 2023 According To Genius Data</p></a>
+                                </div>
+                               
+                              </div>
+                            </div>
+                              <div class="col">
+                                <div class="card h-100">
+                                  <img src="l26.webp" class="card-img-top" alt="..." height="200px">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text"><a href="#">The Top Artists Of 2023 According To Genius Data</p></a>
+                                  </div>
+                                 
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="card h-100">
+                                  <img src="l27.webp" class="card-img-top" alt="..." height="200px">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text"><a href="#">Read All The Lyrics To Conway The Machine & Wun Two’s New Album ‘Palermo’</a></p>
+                                  </div>
+                                 
+                                </div>
+                              </div>
+                              <div class="col">
+                                  <div class="card h-100">
+                                    <img src="l29.webp"
+                                     class="card-img-top" alt="..." height="200px">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Card title</h5>
+                                      <p class="card-text"><a href="#">What’s Up Next: Here’s Every Album Dropping In January</a></p>
+                                    </div>
+                                   
+                                  </div>
+                                </div>
+                           
+                                                                                        
+    
 <footer>
 <div>
 

@@ -1,4 +1,4 @@
-div {
+.div2{
 
     padding: 20px 0px; 
     border: 1px solid #E5E5E5 ;     
@@ -141,6 +141,19 @@ nav ul li:last-child {
     text-align:left;
     opacity: 0.5;
 }
+.slider-nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.slider-nav button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+}
 .distance {
     font-weight: bold;            
 }            
@@ -202,7 +215,7 @@ nav ul li:last-child {
 }
 
 /* Optional: Add margin for better spacing */
-h4,  {
+h4  {
     margin-bottom: 20px;
     font-family: 'Arial', sans-serif;
 }
@@ -387,9 +400,7 @@ select {
 
 
 
-
-
-
-
-
-
+.card{
+    
+    border-color: white;
+}
