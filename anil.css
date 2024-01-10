@@ -15,31 +15,60 @@ border: 1px solid #E5E5E5 0;
 margin: 0px 0px 0px 0px;               
 padding: 30px 0px;
 }
-
-nav {
+/* Center the navigation bar */
+.navigation {
     background-color: #fcfafa;
     padding: 10px 20px;
     border: 1px solid rgb(189, 187, 187);
-    border-radius: 100px;
-    font-size:15px;
+    border-radius: 50px;
+    font-size: 15px;
     font-family: "Arial";
-    color:#9c9494;
-    display: inline-block;
+    color: #9c9494;
+    display: flex;             /* Use flexbox for centering */
+    justify-content: center;   /* Horizontally center the items */
+    align-items: center;       /* Vertically center the items */
+   margin-top: 10px;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0); /* Initially no shadow */
 }
-nav ul {
+
+.navigation:hover {
+    box-shadow: 0px 4px 8px rgba(105, 105, 105, 0.2); /* Shadow on hover (adjust values as needed) */
+}
+
+
+
+/* Remove default list styles and set padding and margin to 0 */
+.navigation ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    margin-right: 15px;
 }
 
-nav ul li {
+/* Display list items inline and add margin for spacing */
+.navigation ul li {
     display: inline;
     margin-right: 20px;
 }
-
-nav ul li:last-child {
-    margin-right: 0;
+.navigation li a {
+    padding-left: 5px; /* Adjust this value to move the text more or less to the left */
 }
+
+.navigation li:first-child a {
+    padding-left: 30px; /* Adjust this value to move the text more or less to the left */
+}
+.navigation li:nth-child(2) a {
+    padding-left: 30px; /* Adjust this value as needed */
+}
+
+.navigation li:nth-child(3) a {
+    padding-left: 30px; /* Adjust this value as needed */
+}
+.navigation li:last-child a {
+    margin-left: -5px; /* Adjust this value as needed */
+}
+
+
 
 
 .transparent-btn {
@@ -65,6 +94,11 @@ nav ul li:last-child {
 .navigation {
     display: inline-block; 
     box-shadow: 0px 2px 10px light grey;
+   margin-left:20%;
+   padding: 5px 5px;
+   
+   
+   
 }
 
 .text {
@@ -235,8 +269,9 @@ font-weight:bold;
     background-color: white;
     color: black;
     padding: 5px; /* Adds a small gap around the footer items */
-    margin-right:320px;
+    margin-left:25px;
     border:transparent;
+    font-weight: bold;
 }
 
 .footer-item {
@@ -256,25 +291,32 @@ font-weight:bold;
     grid-template-columns: repeat(6, 1fr); /* Creates 6 equal-width columns */
     grid-template-rows: repeat(3, auto); /* Creates 3 rows */
     gap:3px; /* Adds a small gap between grid items */
-    margin-left:251px;
+    margin-right:300px;
     border:transparent;
     font-size:14px;
-    margin-right:350px;
+    gap:20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+   
     
     
 }
 
 .grid-item {
-    padding: 10px;
-    
-    text-align: center;
-  border:transparent;
-  letter-spacing: -1px;
-  margin-bottom: -10px;
+    margin-bottom: 10px;
  
   opacity:80%;
  
+  
+    flex: 0 0 calc(33.33% - 20px); /* adjust width as per your design */
+    margin-right: 20px;
+    margin-bottom: 20px;
+    text-align: center;
 }
+
+
+
+
 
 .opacity{
 
@@ -288,28 +330,18 @@ font-weight:bold;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Creates 3 columns */
     gap:3px; /* Adds a small gap between grid items */
-    margin-left:251px;
+    margin-left:50px;
     border:transparent;
     font-size:14px;
     
-    margin-right:800px;
+    
 }
 
 .header {
     font-weight: bold; /* Makes the header text bold */
 }
-
 .grid-item1 {
-    padding: 10px;
-    
-    text-align: center;
-  border:transparent;
-  letter-spacing: 1px;
-  margin-bottom: -10px;
-  font-weight:300;
-  font-size:14px;
-  
- 
+    margin-bottom: 10px; /* Optional: Add some space between items */
 }
 .grid-item1:hover {
     text-decoration: underline; /* Underlines text on hover */
@@ -322,14 +354,10 @@ font-weight:bold;
     text-decoration: underline;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between; /* Adjusts spacing between the two elements */
-    align-items: center; /* Centers items vertically within the flex container */
-}
+
 
 .h44 {
-    margin-right: 200px; /* Adds some space to the right of the h4 element */
+ 
     font-size: 15px;
     
 }
@@ -476,3 +504,73 @@ select {
     color: #aaa;
     cursor: pointer;
 }
+
+
+
+.btn{
+    margin-right:200px;
+}
+
+.right{
+    margin-left: 50px;
+    opacity:60%;
+}
+.mm{
+   margin-left: 25px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between; /* This will evenly distribute the items along the main axis */
+    align-items: center; /* This will center the items vertically */
+}
+
+.container, .language-selector {
+    display: flex;
+    align-items: center; /* This will center the items vertically within their respective containers */
+}
+
+.language-selector select {
+    margin-right: 10px; /* Optional: Adds a bit of space between the select element and the currency symbol */
+}
+
+.wrapper {
+    display: flex;
+    margin-left:1000px;
+    margin-top: -16px;
+}
+
+
+.text {
+    margin-left:5px;  /* Optional: Add some space between the image and text */
+    margin-top: -16px;
+    display:inline-block;
+    vertical-align: middle; 
+
+}
+
+
+.wrapper {
+    display: flex;
+    align-items: center; /* Vertically align items in the center */
+}
+
+.text {
+    margin-right: auto; /* Push the button to the right side */
+    /* Additional styles for the text if needed */
+}
+
+.image-button {
+    border: none; /* Remove default button border */
+    background: none; /* Remove default button background */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    padding: 0; /* Remove default padding */
+    margin-bottom:30px;
+}
+
+.image-button img {
+    width: 24px; /* Adjust width as needed */
+    height: 24px; /* Adjust height as needed */
+    margin: 0 5px; /* Add some space between images */
+}
+

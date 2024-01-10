@@ -101,6 +101,26 @@ function moveIcons(distance) {
     dropdownContent.classList.toggle("show");
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Get all the image elements within the icon-container
+    const images = document.querySelectorAll("#icon-list img");
+
+    images.forEach((image, index) => {
+        image.addEventListener("click", function() {
+            // Hide all row divs
+            const rows = document.querySelectorAll(".row");
+            rows.forEach(row => {
+                row.style.display = "none";
+            });
+
+            // Show the corresponding row div based on the clicked image
+            const rowIndex = Math.floor(index / 5); // 5 images per row
+            rows[rowIndex].style.display = "block";
+        });
+    });
+});
+
+
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
     if (!event.target.matches('.dropdown-button')) {
@@ -141,6 +161,15 @@ window.onclick = function(event) {
     }
 }
 
+function toggleDiv() {
+    const div = document.getElementById('myDiv');
+    if (div.style.maxHeight) {
+        div.style.maxHeight = null;
+    } else {
+        div.style.maxHeight = div.scrollHeight + "px";
+    }
+}
+
 
     </script>
 </head>
@@ -158,35 +187,20 @@ window.onclick = function(event) {
             </ul>
         </nav>
 
+        <div class="wrapper">
+          <h4 class="text">Airbnb Your home</h4>
 
 
+          <button class="image-button">
+            <img src="l.png" alt="First Image">
+            <img src="PP.png" alt="Second Image">
+        </button>
+          
+      </div>
 
-        <!-- The Modal -->
-<div id="myModal">
-  <div class="modal-content">
-      <!-- Content of the modal goes here -->
-      <span class="close">&times;</span>
-      <p>This is the popup content.</p>
-  </div>
-</div>
-
-        <h4 class="text">Airbnb Your home</h4>
-        <img src="world.PNG"class="" class="animated-image" style="width: 20px; height: 20px; ">
+      
     
-        <nav class="img2">
-           
 
-
-            <img src="l.png" id="popupButton1" style="width: 18px; height: 18px; cursor: pointer;" >
-            <img src="PP.PNG" id="popupButton2" style="width: 30px; height: 30px; cursor: pointer;" >
-            
-            <!-- Popup container -->
-            <div id="popupContainer" class="popup">
-                <span class="closeButton" onclick="closePopup()">&times;</span>
-                <p><a href="#">Login</a></p>
-                <p><a href="#">Sign Up</a></p>
-            </div>
-            
 
 </div>
 
@@ -200,7 +214,7 @@ window.onclick = function(event) {
             <span>Rooms</span>
         </div>
         <div class="icon-item">
-            <img src="country.jpg" alt="country">
+            <img src="country.jpg" alt="cou">
             <span>Rooms</span>
         </div>
         <div class="icon-item">
@@ -576,130 +590,129 @@ window.onclick = function(event) {
                                    
                                   </div>
                                 </div>
+                               
+
+                                <button type="button" class="btn btn-dark">Show more</button>
+
+                             
+                                      
+                                          
+                                      </div>
+                                      </div>
+                                    </div>
+                                  </div>
 
 
 
 
 
+
+                              </div>
+                              
+                              
 
  
-                                                <!-- Dropdown container -->
-<div class="dropdown">
-  <!-- Dropdown button or trigger element -->
-  <button onclick="toggleDropdown()" class="dropdown-button">Show Image</button>
-  
-  <!-- Dropdown content (initially hidden) -->
-  <div id="dropdown-content" class="dropdown-content">
-   <img src="">     
     
 <footer>
-<div>
-
-
+  <div>
     <h4 class="right">Inspiration for future getaways</h4>
 </div>
-
 <div class="footer">
-    <a href="#" class="footer-item">Popular</a>
-    <a href="#" class="footer-item">Arts & culture</a>
-    <a href="#" class="footer-item">Outdoors</a>
-    <a href="#" class="footer-item">Mountains</a>
-    <a href="#" class="footer-item">Beach</a>
-    <a href="#" class="footer-item">Unique stays</a>
-    <a href="#" class="footer-item">Categories</a>
-    <a href="#" class="footer-item">Things to do</a>
+  <a href="#" class="footer-item">Popular</a>
+  <a href="#" class="footer-item">Arts & culture</a>
+  <a href="#" class="footer-item">Outdoors</a>
+  <a href="#" class="footer-item">Mountains</a>
+  <a href="#" class="footer-item">Beach</a>
+  <a href="#" class="footer-item">Unique stays</a>
+  <a href="#" class="footer-item">Categories</a>
+  <a href="#" class="footer-item">Things to do</a>
 
 </div>
 
-    <div class="grid-container">
-        <div class="grid-item">Canmore<p class="opacity">Holiday rentals</p></div>
-        <div class="grid-item">Benalmadena<p class="opacity">Flat rentals</p></div>
-        <div class="grid-item">Marbella<p  class="opacity">Villa rentals</p></div>
-        <div class="grid-item">Mijas<p  class="opacity">House rentals</p></div>
-        <div class="grid-item">Prescott<p class="opacity">House rentals</p></div>
-        <div class="grid-item">Scottsdale<p class="opacity">mansion rentals</p></div>
-        <div class="grid-item">Tucson<p class="opacity">Apartment rentals</p></div>
-        <div class="grid-item">Jasper<p class="opacity">Hoilday rentals</p></div>
-        <div class="grid-item">Devonport<p class="opacity">Cottage rentals</p></div>
-        <div class="grid-item">Mallacoota<p class="opacity">Beach house rentals</p></div>
-        <div class="grid-item">Ibiza<p class="opacity">Holiday rentals</p></div>
-        <div class="grid-item">Anaheim<p class="opacity">Family-frendly rentals</p></div>
-        <div class="grid-item">Monterey<p class="opacity">House rentals</p></div>
-        <div class="grid-item">Pasa Robles<p class="opacity">Holiday rentals</p></div>
-        <div class="grid-item">Santa Barbara<p class="opacity">Beachfront rentals</p></div>
-        <div class="grid-item">Sonoma<p class="opacity">Pet-friendly rentals</p></div>
-        <div class="grid-item">Mountain view<p class="opacity">Cabin rentals</p></div>
-        <div class="grid-item">Dubai<p class="opacity">House rentals</p></div>
-       
-    </div>
-    
+<hr>
+<div class="grid-container">
+  <div class="grid-item">Canmore<p class="opacity">Holiday rentals</p></div>
+  <div class="grid-item">Benalmadena<p class="opacity">Flat rentals</p></div>
+  <div class="grid-item">Marbella<p  class="opacity">Villa rentals</p></div>
+  <div class="grid-item">Mijas<p  class="opacity">House rentals</p></div>
+  <div class="grid-item">Prescott<p class="opacity">House rentals</p></div>
+  <div class="grid-item">Scottsdale<p class="opacity">mansion rentals</p></div>
+  <div class="grid-item">Tucson<p class="opacity">Apartment rentals</p></div>
+  <div class="grid-item">Jasper<p class="opacity">Hoilday rentals</p></div>
+  <div class="grid-item">Devonport<p class="opacity">Cottage rentals</p></div>
+  <div class="grid-item">Mallacoota<p class="opacity">Beach house rentals</p></div>
+  <div class="grid-item">Ibiza<p class="opacity">Holiday rentals</p></div>
+  <div class="grid-item">Anaheim<p class="opacity">Family-frendly rentals</p></div>
+  <div class="grid-item">Monterey<p class="opacity">House rentals</p></div>
+  <div class="grid-item">Pasa Robles<p class="opacity">Holiday rentals</p></div>
+  <div class="grid-item">Santa Barbara<p class="opacity">Beachfront rentals</p></div>
+  <div class="grid-item">Sonoma<p class="opacity">Pet-friendly rentals</p></div>
+  <div class="grid-item">Mountain view<p class="opacity">Cabin rentals</p></div>
+  <div class="grid-item">Dubai<p class="opacity">House rentals</p></div>
+ 
+</div>
 <hr>
 
 <div class="grid-container1">
-    <div class="header">Support</div>
-    <div class="header">Hosting</div>
-    <div class="header">Airbnb</div>
-   
-    <div class="grid-item1">Help Centre</div>
-    <div class="grid-item1">Airbnb your home</div>
-    
-    <div class="grid-item1">Newsroom
-    </div>
-    
-    <div class="grid-item1">AirCover</div>
-    
-    <div class="grid-item1">AirCover for Hosts
-    </div>
-    
-    <div class="grid-item1">New features</div>
-    
-    <div class="grid-item1">Anti-discrimination</div>
-    
-    <div class="grid-item1">Hosting resources</div>
-    
-    <div class="grid-item1">Careers</div>
-    
-    <div class="grid-item1">Disability support</div>
-    
-    <div class="grid-item1">Community forum</div>
-    
-    <div class="grid-item1">Investors</div>
-    
-    <div class="grid-item1">Cancellation options</div>
-    
-    <div class="grid-item1">Hosting responsibly</div>
-    
-    <div class="grid-item1">Airbnb.org emergency stays</div>
-    <div class="grid-item1">Report neighbourhood concern</div>
-    
+  <div class="header">Support</div>
+  <div class="header">Hosting</div>
+  <div class="header">Airbnb</div>
+ 
+  <div class="grid-item1">Help Centre</div>
+  <div class="grid-item1">Airbnb your home</div>
+  
+  <div class="grid-item1">Newsroom
+  </div>
+  
+  <div class="grid-item1">AirCover</div>
+  
+  <div class="grid-item1">AirCover for Hosts
+  </div>
+  
+  <div class="grid-item1">New features</div>
+  
+  <div class="grid-item1">Anti-discrimination</div>
+  
+  <div class="grid-item1">Hosting resources</div>
+  
+  <div class="grid-item1">Careers</div>
+  
+  <div class="grid-item1">Disability support</div>
+  
+  <div class="grid-item1">Community forum</div>
+  
+  <div class="grid-item1">Investors</div>
+  
+  <div class="grid-item1">Cancellation options</div>
+  
+  <div class="grid-item1">Hosting responsibly</div>
+  
+  <div class="grid-item1">Airbnb.org emergency stays</div>
+  <div class="grid-item1">Report neighbourhood concern</div>
+  
 </div>
-    <br>
-    <br>
-    <br>
-<div>
-    <div class="container">
-        <h4 class="h44">© 2024 Airbnb, Inc. <span class="under">Privacy.</span> <span class="under">Terms.</span> <span class="under">Sitemap.</span> <span class="under">Company details</span></h4>
-    
-        <div class="language-selector">
-            <label for="language"></label>
-            <select id="language">
-                
-                <option value="en">English</option>
-                <option value="fr">French</option>
-                <option value="es">Spanish</option>
-            </select>
-        </div>
-    </div>
-    
+<hr>
 
+<div class="wrapper">
+  <div class="container">
+    <h4 class="h44">© 2024 Airbnb, Inc. <span class="under">Privacy.</span>  <span class="under">Terms.</span> <span class="under">Sitemap.</span> <span class="under">Company details.</span></h4>
+  </div>
 
+  <div class="language-selector">
+    <label for="language"></label>
+    <select id="language">
+      <option value="en">English</option>
+      <option value="fr">French</option>
+      <option value="es">Spanish</option>
 
-
-
-
-
-
-
+      
+    </select>
+    <p> INR</p>
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-twitter"></i>
+    <i class="fa-brands fa-instagram"></i>
+  </div>
+</div>
 
 
 </footer>
